@@ -1,71 +1,54 @@
-# Health Promotion LINE Official Account – Webhook & Flex Integration
-
-## Overview
-
-| Item | Description |
-|------|-------------|
-| Project | Health Promotion LINE Official Account |
-| Organization | Kamphaeng Phet Community Municipal Hospital |
-| Purpose | Support LINE OA broadcasts, Flex Messages, and backend messaging |
-| Role | Integration between LINE Messaging API and backend systems |
+# Health Promotion Integration Service
+**Kamphaeng Phet Community Municipal Hospital**
+*LINE Official Account Platform – Health Promotion Division*
 
 ---
 
-## Module Focus
+## 1. System Overview
 
-| Area | Description |
-|------|-------------|
-| Webhook Endpoint | Receives and handles LINE events |
-| Flex Messaging | Sends structured personalized messages |
-| Broadcasts | Scheduled and campaign messaging |
-| Resources | Health promotion content and schedules |
+The **Health Promotion Integration Service** is a specialized module designed to manage and execute public health communication strategies via the LINE Messaging API. Its primary function is to orchestrate high-fidelity content delivery, including targeted broadcasts and dynamic Flex Messages, enabling the hospital to effectively disseminate health information and campaign updates to the community.
 
----
+| Attribute | Specification |
+|:---|:---|
+| **Module Name** | Health Promotion Webhook & Flex Engine |
+| **Organization** | Kamphaeng Phet Community Municipal Hospital |
+| **Primary Scope** | Broadcasts, Flex Messaging, and Event Handling |
+| **Operational Role** | Content Delivery & Integration Middleware |
 
-## Architecture Layers
+## 2. Interface Specifications
 
-| Layer | Responsibility |
-|-------|--------------|
-| Interface | HTTP webhook endpoint |
-| Event Processing | Validates and dispatches LINE events |
-| Flex Engine | Constructs and sends Flex Messages |
-| Backend API | Integrates with hospital services |
+This section demonstrates the visual components rendered on the user's device, focusing on **Flex Messages** (e.g., Health Cards, Appointment Reminders) or the **Rich Menu** navigation used for health campaigns.
 
----
+<p align="center">
+  <img src="richmenu.png" alt="User Interface Preview" width="100%" style="border: 1px solid #ddd;">
+</p>
+<p align="center"><em>Figure 1: Health Promotion Interface & Flex Message Layout</em></p>
 
-## Event Flow
+## 3. Architecture & Operational Workflow
 
-| Step | Description |
-|------|-------------|
-| 1 | LINE triggers webhook event |
-| 2 | Validate request using channel secret |
-| 3 | Dispatch to event processor |
-| 4 | Execute broadcast or Flex message action |
-| 5 | Send response via LINE Messaging API |
+The system utilizes a modular architecture to handle incoming events and outgoing broadcasts. The workflow below illustrates the process of validating a webhook event and generating a structured Flex Message response.
 
----
+```mermaid
+sequenceDiagram
+    participant User as End User
+    participant LINE as LINE Platform
+    participant Webhook as Webhook Endpoint
+    participant FlexEngine as Flex Message Engine
+    participant Backend as Broadcast API
 
-## Configuration
+    User->>LINE: Interacts (e.g., Taps Campaign)
+    LINE->>Webhook: HTTPS POST /webhook
+    Note right of LINE: X-Line-Signature header
+    
+    rect rgb(240, 240, 240)
+        Note over Webhook: Security & Validation
+        Webhook->>Webhook: Verify Signature
+    end
 
-| Variable | Purpose |
-|----------|---------|
-| LINE_CHANNEL_SECRET | Validate webhook calls |
-| LINE_CHANNEL_TOKEN | API access |
-| BROADCAST_API_URL | Backend broadcast API |
-| FLEX_TEMPLATE_PATH | Flex message definitions |
-
----
-
-## Deployment
-
-| Requirement | Detail |
-|-------------|--------|
-| Protocol | HTTPS |
-| Hosting | Cloud or on-premise |
-| Monitoring | Logging & alerting |
-
----
-
-## Usage
-
-This system is for official use by hospital health promotion teams only.
+    alt Valid Request
+        Webhook->>Backend: Fetch Campaign Data
+        Backend-->>FlexEngine: Return Health Data
+        FlexEngine->>FlexEngine: Construct JSON Payload
+        FlexEngine->>LINE: Push/Reply Flex Message
+        LINE->>User: Renders Flex Message
+    end
