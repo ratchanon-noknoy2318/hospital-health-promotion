@@ -1,0 +1,71 @@
+{
+  "size": {
+    "width": 2500,
+    "height": 1686
+  },
+  "selected": true,
+  "name": "ริชเมนู",
+  "chatBarText": "เมนูหลัก",
+  "areas": [
+    {
+      "bounds": {
+        "x": 0,
+        "y": 4,
+        "width": 1592,
+        "height": 946
+      },
+      "action": {
+        "type": "message",
+        "text": "ติดต่อ-สอบถาม"
+      }
+    },
+    {
+      "bounds": {
+        "x": 59,
+        "y": 967,
+        "width": 781,
+        "height": 697
+      },
+      "action": {
+        "type": "message",
+        "text": "ตารางนัดหมายและการจองคิว"
+      }
+    },
+    {
+      "bounds": {
+        "x": 869,
+        "y": 963,
+        "width": 761,
+        "height": 701
+      },
+      "action": {
+        "type": "message",
+        "text": "ความรู้คุณแม่ตั้งครรภ์"
+      }
+    },
+    {
+      "bounds": {
+        "x": 1671,
+        "y": 984,
+        "width": 768,
+        "height": 671
+      },
+      "action": {
+        "type": "message",
+        "text": "ศูนย์ช่วยเหลือ"
+      }
+    },
+    {
+      "bounds": {
+        "x": 1630,
+        "y": 0,
+        "width": 785,
+        "height": 955
+      },
+      "action": {
+        "type": "message",
+        "text": "งานส่งเสริมสุขภาพแม่และเด็ก"
+      }
+    }
+  ]
+}
