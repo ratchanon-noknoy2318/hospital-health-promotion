@@ -1,60 +1,63 @@
-# OFFICIAL SYSTEM SPECIFICATION (SIS)
-## Health Promotion & Maternal Care Interface | KPPMCH
+# OFFICIAL TECHNICAL SPECIFICATION: HEALTH PROMOTION GATEWAY
+**KAMPHAENG PHET MUNICIPALITY | HIS-INTEGRATION DIVISION**
 
 ---
 
-### I. DOCUMENT ADMINISTRATION
-| ATTRIBUTE | SPECIFICATION |
+### [ SECTION I : DOCUMENTATION CONTROL ]
+| CLASSIFICATION | OFFICIAL SYSTEM ATTRIBUTE |
 | :--- | :--- |
-| Project Identifier | KPC-HIS-HEALTH-002 |
-| System Module | Health Promotion Integration Service (Webhook Engine) |
-| Organization | Kamphaeng Phet Municipal Community Hospital |
-| Classification | Official Government / Internal Confidential |
-| Revision | 1.0.5 (Production Release 2026) |
+| Document Identifier | KPC-HIS-HEALTH-002-REV1.0.5 |
+| System Authority | Kamphaeng Phet Municipal Community Hospital |
+| Security Clearance | Confidential / Government Data Protection Level |
+| Infrastructure Host | Municipal Healthcare Cloud Service (GAS/Webhook) |
+| Revision Standard | Clinical Quality Improvement (CQI) Compliant |
 
 ---
 
-### II. INTERFACE ARCHITECTURE
-| COMPONENT | VISUAL REFERENCE |
+### [ SECTION II : INTERFACE ARCHITECTURAL VISUALIZATION ]
+| COMPONENT ID | VISUAL REFERENCE SYSTEM |
 | :--- | :--- |
-| Interface Layout | Figure 2.0: 5-Grid Health Promotion System |
-| Reference Image | <img src="richmenu.png" alt="Health Promotion Interface" width="100%"> |
-| Description | Client-Side Protocol for Maternal & Child Care |
+| **KPC-UI-002** | ![Interface Protocol Figure](richmenu.png) |
+| **Description** | Figure 2.0: Official 5-Grid Health Promotion Interface Protocol |
 
 ---
 
-### III. CORE ARCHITECTURAL LOGIC
-| COMPONENT LAYER | ARCHITECTURAL IMPLEMENTATION |
+### [ SECTION III : LOGIC LAYER & ARCHITECTURAL STANDARDS ]
+| ARCHITECTURE LAYER | IMPLEMENTATION & GOVERNANCE |
 | :--- | :--- |
-| Event Routing | Keyword-Driven Webhook for clinical service mapping |
-| Logic Layer | Flex Message Synthesis Engine (Google Apps Script) |
-| Standardization | Maternal Care Protocol Integration (Nursing Standard) |
-| Audit Path | Systematic Logging for Healthcare Quality Assurance (CQI) |
+| Event Distribution | Dynamic Keyword-Driven Webhook |
+| Computational Logic | Flex Synthesis Engine (Serverless GAS Architecture) |
+| Clinical Compliance | Maternal Care Protocol (Professional Nursing Standard) |
+| Performance Audit | Systematic Logging for Healthcare QA (CQI) |
 
 ---
 
-### IV. EVENT ROUTING MATRIX
-| OPERATIONAL DOMAIN | PROTOCOL (SYNTHESIS HANDLER) |
+### [ SECTION IV : EVENT ROUTING MATRIX (FUNCTIONAL DOMAIN) ]
+| SERVICE DOMAIN (THAILAND) | SYSTEM HANDLER (PROTOCOL) |
 | :--- | :--- |
-| การนัดหมาย | getPrenatalAppointments() |
-| ให้ความรู้ / อาการผิดปกติ | educatePregnantWomen() / getPregnancySymptoms() |
-| ติดต่อเรา / ช่วยเหลือ | getContactUS() / getHelpCenter() |
-| การวางแผนครอบครัว | getContraceptiveInfo() |
-| ประชาสัมพันธ์ | communicationAndSupport() |
-| บริการพิเศษ | supportMotherChildWellbeing() |
-| อาการที่ควรมาพบแพทย์ | getWhenToGetCare() |
-| เกี่ยวกับเรา / คณะผู้จัดทำ | getAboutUs() / getTeam() |
-| คำถามที่พบบ่อย | getFaq() |
+| การนัดหมายและตารางเวลา | getPrenatalAppointments() |
+| การให้ความรู้และเฝ้าระวังอาการผิดปกติ | educatePregnantWomen() / getPregnancySymptoms() |
+| ศูนย์ประสานงานและขอความช่วยเหลือ | getContactUS() / getHelpCenter() |
+| บริการวางแผนครอบครัวและอนามัยเจริญพันธุ์ | getContraceptiveInfo() |
+| ศูนย์ข่าวสารและประชาสัมพันธ์ | communicationAndSupport() |
+| บริการดูแลสุขภาพแม่และเด็กกรณีพิเศษ | supportMotherChildWellbeing() |
+| การคัดกรองอาการที่ควรพบแพทย์เร่งด่วน | getWhenToGetCare() |
+| ข้อมูลบุคลากรและโครงสร้างหน่วยงาน | getAboutUs() / getTeam() |
+| ฐานข้อมูลคำถามที่พบบ่อย (FAQ) | getFaq() |
 
 ---
 
-### V. GOVERNANCE & COMPLIANCE
-| CATEGORY | STATUS & VERIFICATION |
+### [ SECTION V : EXECUTIVE VERIFICATION & COMPLIANCE ]
+| COMPLIANCE CATEGORY | AUTHENTICATION STATUS |
 | :--- | :--- |
-| Requirement Source | Senior Professional Nursing Care Standards |
-| Executive Approval | Verified by Kamphaeng Phet Municipal Secretary |
-| Data Privacy | Thailand PDPA & Healthcare Data Privacy Standards |
-| Development Speed | Rapid Adaptation to Clinical Protocols |
+| **Institutional Approval** | Verified by Kamphaeng Phet Municipal Secretary |
+| **Requirement Source** | Clinical Frontline Requirements (Senior Professional Nurse) |
+| **Legal Framework** | Thailand Personal Data Protection Act (PDPA) |
+| **Engineering Status** | Production Environment / Rapid Deployment Certified |
 
 ---
-<p align="center"><small>This document serves as the Official Technical Framework for Health Promotion Services</small></p>
+
+**[ END OF TECHNICAL SPECIFICATION ]**
+<p align="center">
+  <small><em>This framework is the property of Kamphaeng Phet Municipality. Unauthorised distribution is prohibited.</em></small>
+</p>
